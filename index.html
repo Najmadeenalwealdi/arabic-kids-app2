@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6c4bd3">
+  <meta name="description" content="لعبة عربية ممتعة لتعليم الأطفال الأرقام والحروف مع الحيوانات والصوت والاختبارات.">
+  <title>مغامرات الحروف والأرقام</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-top">
+      <div class="brand-mark" aria-hidden="true">🌈</div>
+      <div>
+        <p class="eyebrow">عالم صغير مليء بالتعلّم والمرح</p>
+        <h1>مغامرات الحروف والأرقام</h1>
+        <p class="hero-copy">تعال نلعب ونتعلّم مع أصدقائنا الحيوانات! 🐼🦊🦁</p>
+      </div>
+      <div class="hero-buddy" aria-hidden="true">🦊</div>
+    </div>
+    <div class="stats" aria-label="تقدم الطفل">
+      <div class="stat"><span>⭐</span><div><strong id="starCount">0</strong><small>نجومي</small></div></div>
+      <div class="stat"><span>🏅</span><div><strong id="levelName">مستكشف صغير</strong><small>مستواي</small></div></div>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true">🔊 الصوت يعمل</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="mode-tabs" aria-label="اختيار النشاط">
+      <button class="mode-tab active" data-mode="numbers" type="button">🔢 مملكة الأرقام</button>
+      <button class="mode-tab" data-mode="letters" type="button">🔤 غابة الحروف</button>
+      <button class="mode-tab" data-mode="quiz" type="button">🎯 تحدّي الأبطال</button>
+    </nav>
+
+    <section class="welcome-card" id="welcomeCard">
+      <div class="welcome-art" aria-hidden="true"><span>🐻</span><span>🎈</span><span>🦋</span></div>
+      <div>
+        <h2 id="sectionTitle">أهلًا يا بطل! مستعد لمغامرة الأرقام؟</h2>
+        <p id="sectionDescription">اضغط على أي بطاقة، تعرّف عليها، واستمع إلى نطقها باللغة العربية.</p>
+      </div>
+    </section>
+
+    <section id="learnPanel" class="learn-layout">
+      <div class="cards-panel">
+        <div class="section-heading">
+          <h2 id="gridTitle">اختر رقمًا</h2>
+          <span class="tiny-label">اضغط على البطاقة</span>
+        </div>
+        <div class="learning-grid" id="learningGrid"></div>
+      </div>
+      <aside class="detail-card" aria-live="polite">
+        <div class="detail-sky">
+          <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span>
+          <div class="detail-emoji" id="detailEmoji">🐠</div>
+          <div class="floating-cloud">☁️</div>
+        </div>
+        <div class="detail-content">
+          <p class="eyebrow" id="detailEyebrow">مغامرة جديدة</p>
+          <h2 id="detailTitle">الرقم ١ — واحد</h2>
+          <p id="detailText">سمكة واحدة تسبح في البحر.</p>
+          <div class="detail-actions">
+            <button class="primary-btn" id="speakButton" type="button">🔊 اسمع النطق</button>
+            <button class="soft-btn" id="nextButton" type="button">التالي ←</button>
+          </div>
+          <p class="mini-tip" id="detailTip">💡 ردّد الاسم بصوتك ثم اختر بطاقة أخرى.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="quizPanel" class="quiz-panel" hidden>
+      <div class="quiz-header"><div><p class="eyebrow">اختبر ذاكرتك</p><h2>هل تستطيع اختيار الإجابة الصحيحة؟</h2></div><div class="quiz-mascot">🦁</div></div>
+      <div class="quiz-question-card">
+        <div class="question-emoji" id="questionEmoji">🎈</div>
+        <p class="question-text" id="questionText">أين الرقم ٣؟</p>
+        <div class="quiz-options" id="quizOptions"></div>
+        <p class="feedback" id="quizFeedback" aria-live="polite">اختر الإجابة التي تراها صحيحة!</p>
+        <button class="primary-btn" id="newQuestionButton" type="button">سؤال جديد ✨</button>
+      </div>
+    </section>
+
+    <section class="bottom-banner">
+      <div class="banner-icon" aria-hidden="true">🎁</div>
+      <div><h2>كل محاولة تعلّم جديد!</h2><p>استمر في اللعب واجمع النجوم. أنت رائع حتى عندما تحتاج إلى المحاولة مرة أخرى.</p></div>
+      <div class="banner-animal" aria-hidden="true">🐼</div>
+    </section>
+  </main>
+
+  <footer>صُنع بحب للصغار ❤️ <span>التعلّم مغامرة كل يوم!</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

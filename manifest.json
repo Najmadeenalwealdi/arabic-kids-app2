@@ -1,0 +1,10 @@
+{
+    "name": "مغامرات الحروف والأرقام",
+    "short_name": "مغامرات التعلم",
+    "description": "لعبة عربية ممتعة لتعليم الأطفال الأرقام والحروف",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f5f0ff",
+    "theme_color": "#6c4bd3",
+    "orientation": "portrait"
+}
